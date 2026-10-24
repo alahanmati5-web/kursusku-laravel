@@ -43,3 +43,19 @@ dengan nama route `home`.
 ## Catatan Pengembangan
 Proyek ini dikembangkan sebagai bagian dari praktikum
 Laravel dan penerapan pola MVC.
+## Cara Menjalankan
+
+1. Pastikan PHP, Composer, dan dependency Laravel sudah tersedia.
+2. Buka terminal pada folder proyek `kursusku`.
+3. Jalankan server Laravel menggunakan PHP 8.4:
+
+   `"C:\laragon\bin\php\php-8.4.27-Win32-vs17-x64\php.exe" artisan serve`
+
+4. Buka browser dan akses `http://127.0.0.1:8000`.
+
+## Pengujian
+
+- Route utama `/` menggunakan nama route `home`.
+- Route utama diarahkan ke `HomeController@index`.
+- Data kursus dikirim dari Controller ke Blade View.
+- URL yang tidak terdaftar, seperti `/abc`, menghasilkan respons 404 Not Found.
