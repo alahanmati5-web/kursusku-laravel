@@ -1,0 +1,32 @@
+TEST MATRIX WEEK-05
+
+1. Form Registrasi
+   Input:
+   Nama: Muhammad Hafiz
+   Email: [alahanmati@gmail.com](mailto:alahanmati@gmail.com)
+   Kursus: Kursus pilihan
+
+Hasil: Data berhasil dimasukkan ke dalam form.
+Status: PASS
+
+2. POST
+   Input:
+   Nama: Muhammad Hafiz
+   Email: [alahanmati@gmail.com](mailto:alahanmati@gmail.com)
+
+Hasil: Data registrasi berhasil dikirim dan ditampilkan.
+Status: PASS
+
+3. GET
+   Input:
+   Nama: Muhammad Hafiz
+   Email: [alahanmati@gmail.com](mailto:alahanmati@gmail.com)
+
+Hasil: Data berhasil dikirim melalui URL.
+Status: PASS
+
+4. Navigation
+   Input: Klik menu navigasi menuju halaman registrasi.
+
+Hasil: Halaman form registrasi berhasil dibuka.
+Status: PASS

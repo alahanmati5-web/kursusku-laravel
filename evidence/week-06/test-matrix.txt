@@ -1,0 +1,46 @@
+TEST MATRIX WEEK 06 - KURSUSKU
+================================
+
+No | Skenario Pengujian                  | Input                         | Hasil yang Diharapkan                    | Status
+---|-------------------------------------|-------------------------------|------------------------------------------|-------
+1  | Form lengkap                        | Semua field diisi             | Data dapat dikirim                       | PASS
+2  | Diskon Mahasiswa                   | Type = Mahasiswa               | Diskon 20% dan total dihitung            | PASS
+3  | Diskon Guru                        | Type = Guru                    | Diskon 15% dan total dihitung            | PASS
+4  | Diskon Umum                        | Type = Umum                    | Diskon 5% dan total dihitung             | PASS
+5  | Multiple checkbox minat            | Pilih 2+ minat                 | Semua minat tampil pada ringkasan        | PASS
+6  | Checkbox minat kosong              | Tidak pilih minat              | "Tidak ada minat tambahan"               | PASS
+7  | History dummy                      | Buka history.php               | Data dummy tampil dalam tabel            | PASS
+8  | Ringkasan pendaftaran              | Form berhasil dikirim          | Data peserta dan kursus tampil          | PASS
+9  | Total biaya                        | Pilih kursus + participant type| Total setelah diskon tampil benar        | PASS
+
+
+CONTOH PERHITUNGAN
+==================
+
+Web Development
+Harga       : Rp750.000
+
+Mahasiswa
+Diskon      : 20%
+Potongan    : Rp150.000
+Total       : Rp600.000
+
+Guru
+Diskon      : 15%
+Potongan    : Rp112.500
+Total       : Rp637.500
+
+Umum
+Diskon      : 5%
+Potongan    : Rp37.500
+Total       : Rp712.500
+
+
+KESIMPULAN
+==========
+
+Seluruh skenario pengujian Week 06 berhasil dijalankan.
+Fitur form registrasi, diskon berdasarkan participant type,
+multiple checkbox minat, checkbox minat kosong, ringkasan
+pendaftaran, total biaya, dan history dummy dapat berjalan
+sesuai hasil yang diharapkan.

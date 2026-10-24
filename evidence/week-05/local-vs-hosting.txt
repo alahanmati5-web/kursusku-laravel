@@ -1,0 +1,15 @@
+LOCAL VS HOSTING
+
+LOCAL
+URL: http://kursusku-prototype.test/
+Server: Laragon
+Status: Berjalan di komputer lokal
+Keterangan: Website digunakan untuk pengembangan dan pengujian.
+
+HOSTING
+Status: Belum dilakukan
+Keterangan: Website belum dipublikasikan ke hosting/internet.
+
+KESIMPULAN
+Website KursusKu saat ini masih dijalankan secara lokal menggunakan Laragon.
+Pengujian dilakukan pada komputer lokal sebelum website dipublikasikan ke hosting.
