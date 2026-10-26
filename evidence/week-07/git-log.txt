@@ -1,0 +1,9 @@
+Git Log — KursusKu
+Praktikum Week 7
+
+7f9cd21 Update Laravel KursusKu features and evidence
+6184d54 Add Laravel week 7 practical evidence
+94d86d3 Update README with Laravel setup and testing instructions
+1f571d8 Merge GitHub repository with local KursusKu project
+236224e Initial commit: KursusKu Laravel MVC
+82ca486 Initial commit

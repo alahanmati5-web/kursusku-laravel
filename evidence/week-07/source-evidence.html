@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Source Code Evidence - KursusKu</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 16px;
+            font-family: Arial, sans-serif;
+            background: #07130f;
+            color: #f2fff8;
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            color: #7dffb0;
+        }
+
+        .card {
+            margin: 20px 0;
+            padding: 22px;
+            border: 1px solid #28734e;
+            border-radius: 12px;
+            background: #103526;
+        }
+
+        pre {
+            padding: 16px;
+            overflow-x: auto;
+            overflow-wrap: anywhere;
+            color: #a5ffc7;
+            background: #07130f;
+            border-radius: 8px;
+        }
+
+        code {
+            color: #a5ffc7;
+        }
+
+        .note {
+            color: #c1d7ca;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+<main>
+    <h1>Source Code Evidence</h1>
+    <p>Project Laravel KursusKu — Praktikum Week 7</p>
+
+    <section class="card">
+        <h2>1. Route</h2>
+        <p>Lokasi: <code>routes/web.php</code></p>
+        <pre>Route::get('/', [HomeController::class, 'index'])
+    ->name('home');</pre>
+        <p>Route utama mengarahkan permintaan halaman beranda ke HomeController.</p>
+    </section>
+
+    <section class="card">
+        <h2>2. Controller</h2>
+        <p>Lokasi: <code>app/Http/Controllers/HomeController.php</code></p>
+        <ul>
+            <li>Menetapkan nama website KursusKu.</li>
+            <li>Menyiapkan data daftar kursus dalam array.</li>
+            <li>Mengirim data ke view menggunakan <code>compact()</code>.</li>
+        </ul>
+        <pre>return view('home', compact('namaWebsite', 'kursus'));</pre>
+    </section>
+
+    <section class="card">
+        <h2>3. View Blade</h2>
+        <p>Lokasi: <code>resources/views/home.blade.php</code></p>
+        <ul>
+            <li>Menampilkan data yang dikirim oleh controller.</li>
+            <li>Menggunakan <code>@foreach</code> untuk daftar kursus.</li>
+            <li>Menggunakan helper <code>asset()</code> untuk CSS dan gambar.</li>
+        </ul>
+        <pre>@foreach ($kursus as $item)
+    ...
+@endforeach</pre>
+    </section>
+
+    <section class="card">
+        <h2>4. Asset Publik</h2>
+        <p>CSS: <code>public/css/style.css</code></p>
+        <p>Gambar: <code>public/images/hero-kursus.png</code></p>
+        <p>Asset digunakan untuk mendukung tampilan halaman utama KursusKu.</p>
+    </section>
+
+    <section class="card">
+        <h2>5. Pemeriksaan</h2>
+        <pre>php artisan route:list</pre>
+        <p>
+            Perintah ini digunakan untuk melihat route yang terdaftar
+            pada aplikasi Laravel.
+        </p>
+        <p class="note">
+            Halaman ini merupakan dokumentasi source code. Untuk bukti
+            autentik, gunakan screenshot editor yang menampilkan kode
+            sebenarnya serta screenshot terminal hasil pengujian.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Kesimpulan</h2>
+        <p>
+            Struktur project KursusKu menerapkan alur Laravel MVC:
+            route menerima request, controller menyiapkan data,
+            dan view Blade menyajikan halaman kepada pengguna.
+        </p>
+    </section>
+</main>
+</body>
+</html>

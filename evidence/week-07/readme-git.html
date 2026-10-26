@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README dan Git - KursusKu</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 16px;
+            font-family: Arial, sans-serif;
+            background: #07130f;
+            color: #f2fff8;
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            color: #7dffb0;
+        }
+
+        .panel {
+            margin: 20px 0;
+            padding: 22px;
+            background: #103526;
+            border: 1px solid #28734e;
+            border-radius: 12px;
+        }
+
+        code, pre {
+            color: #a5ffc7;
+        }
+
+        pre {
+            padding: 16px;
+            overflow-x: auto;
+            background: #07130f;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+
+        a {
+            color: #7dffb0;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #b8cfc1;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+<main>
+    <h1>Dokumentasi README dan Git</h1>
+    <p>Project Laravel KursusKu — Praktikum Week 7</p>
+
+    <section class="panel">
+        <h2>Informasi Project</h2>
+        <p><strong>Nama:</strong> KursusKu</p>
+        <p><strong>Framework:</strong> Laravel 13</p>
+        <p><strong>PHP:</strong> 8.4.27</p>
+        <p><strong>Branch:</strong> main</p>
+        <p>
+            <strong>Repository:</strong>
+            <a href="https://github.com/alahanmati5-web/kursusku-laravel">
+                GitHub KursusKu
+            </a>
+        </p>
+    </section>
+
+    <section class="panel">
+        <h2>Struktur MVC</h2>
+        <ul>
+            <li>Route: <code>routes/web.php</code></li>
+            <li>Controller: <code>app/Http/Controllers/HomeController.php</code></li>
+            <li>View: <code>resources/views/home.blade.php</code></li>
+            <li>CSS: <code>public/css/style.css</code></li>
+            <li>Gambar: <code>public/images/hero-kursus.png</code></li>
+        </ul>
+    </section>
+
+    <section class="panel">
+        <h2>Perintah Menjalankan Project</h2>
+        <pre>php artisan serve</pre>
+        <p>Buka browser di alamat <code>http://127.0.0.1:8000</code>.</p>
+        <p>Gunakan konfigurasi PHP dan database lokal yang sesuai dengan project.</p>
+    </section>
+
+    <section class="panel">
+        <h2>Perintah Git</h2>
+        <pre>git status
+git log --oneline -10
+git add EVIDENCE-STATUS.md evidence/week-07/
+git commit -m "Complete week 7 evidence documentation"
+git push origin main</pre>
+        <p>
+            Periksa status Git sebelum commit agar perubahan yang disimpan
+            sesuai dengan file yang memang ingin dikumpulkan.
+        </p>
+    </section>
+
+    <section class="panel">
+        <h2>Evidence Week 7</h2>
+        <p>
+            Folder <code>evidence/week-07/</code> menyimpan screenshot,
+            dokumentasi, catatan penggunaan AI, dan matriks pengujian
+            praktikum.
+        </p>
+        <p>
+            Daftar file dapat diperiksa melalui
+            <code>evidence/week-07/README.md</code>.
+        </p>
+    </section>
+
+    <footer>
+        Dokumentasi pendukung — KursusKu
+    </footer>
+</main>
+</body>
+</html>

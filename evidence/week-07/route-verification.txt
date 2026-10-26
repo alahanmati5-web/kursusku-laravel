@@ -1,0 +1,21 @@
+SOURCE-LEVEL VERIFICATION
+KursusKu - Laravel MVC
+
+PASS | routes/web.php exists
+PASS | HomeController exists
+PASS | home.blade.php exists
+PASS | public CSS exists
+PASS | public image exists
+PASS | named route home
+PASS | route points HomeController
+PASS | controller returns home view
+PASS | controller sends course data
+PASS | Blade loops featured courses
+PASS | Blade uses asset helper
+
+Runtime route verification:
+GET|HEAD / -> home -> HomeController@index
+
+Project: KursusKu
+Framework: Laravel 13
+PHP: 8.4.27

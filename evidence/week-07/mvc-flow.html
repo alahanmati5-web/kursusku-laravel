@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel MVC Flow - KursusKu</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 16px;
+            font-family: Arial, sans-serif;
+            background: #07130f;
+            color: #f2fff8;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: #7dffb0;
+        }
+
+        .subtitle {
+            color: #c1d7ca;
+            line-height: 1.6;
+        }
+
+        .flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .step {
+            width: min(100%, 520px);
+            padding: 18px;
+            border: 1px solid #39a86d;
+            border-radius: 12px;
+            background: #103526;
+        }
+
+        .step h2 {
+            margin: 0 0 8px;
+            color: #7dffb0;
+            font-size: 20px;
+        }
+
+        .step p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .arrow {
+            color: #7dffb0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .note {
+            margin-top: 30px;
+            padding: 16px;
+            border-radius: 10px;
+            background: #0c2118;
+            text-align: left;
+            line-height: 1.7;
+        }
+
+        code {
+            color: #7dffb0;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #a9c4b4;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Alur MVC Laravel — KursusKu</h1>
+
+        <p class="subtitle">
+            Alur permintaan pengguna dari Route hingga halaman
+            KursusKu ditampilkan di browser.
+        </p>
+
+        <section class="flow">
+            <div class="step">
+                <h2>1. Browser / Request</h2>
+                <p>Pengguna membuka halaman utama melalui URL /.</p>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="step">
+                <h2>2. Route</h2>
+                <p><code>routes/web.php</code></p>
+                <p>Route bernama <code>home</code> mengarah ke HomeController.</p>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="step">
+                <h2>3. Controller</h2>
+                <p><code>HomeController@index</code></p>
+                <p>Menyiapkan nama website dan daftar kursus.</p>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="step">
+                <h2>4. Data</h2>
+                <p>Data kursus disiapkan dalam array pada controller.</p>
+                <p>Project ini menggunakan data array, bukan Model database untuk daftar kursus.</p>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="step">
+                <h2>5. View (Blade)</h2>
+                <p><code>resources/views/home.blade.php</code></p>
+                <p>Menampilkan data menggunakan Blade, termasuk <code>@foreach</code>.</p>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="step">
+                <h2>6. HTML Response</h2>
+                <p>Laravel mengirimkan hasil tampilan halaman kepada browser.</p>
+            </div>
+        </section>
+
+        <section class="note">
+            <strong>Komponen pendukung:</strong>
+            <ul>
+                <li>CSS: <code>public/css/style.css</code></li>
+                <li>Gambar: <code>public/images/hero-kursus.png</code></li>
+                <li>Framework: Laravel 13</li>
+            </ul>
+            <strong>Catatan:</strong> data kursus saat ini disiapkan langsung
+            di controller, sehingga diagram ini tidak mengasumsikan adanya
+            Model atau database khusus untuk data kursus.
+        </section>
+
+        <footer>
+            Dokumentasi praktikum Week 7 — Project KursusKu
+        </footer>
+    </main>
+</body>
+</html>

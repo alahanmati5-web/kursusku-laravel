@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Verification - KursusKu</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 16px;
+            font-family: Arial, sans-serif;
+            background: #07130f;
+            color: #f2fff8;
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            color: #7dffb0;
+        }
+
+        .panel {
+            margin: 20px 0;
+            padding: 22px;
+            border: 1px solid #28734e;
+            border-radius: 12px;
+            background: #103526;
+        }
+
+        .item {
+            margin: 12px 0;
+            padding: 12px;
+            border-radius: 8px;
+            background: #0b2118;
+        }
+
+        code, pre {
+            color: #a5ffc7;
+        }
+
+        pre {
+            padding: 16px;
+            overflow-x: auto;
+            overflow-wrap: anywhere;
+            background: #07130f;
+            border-radius: 8px;
+        }
+
+        .note {
+            color: #c1d7ca;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+<main>
+    <h1>Route Verification — KursusKu</h1>
+    <p>Dokumentasi pemeriksaan route dan komponen Laravel MVC.</p>
+
+    <section class="panel">
+        <h2>1. Informasi Project</h2>
+        <div class="item">Framework: Laravel 13.38.0</div>
+        <div class="item">PHP: 8.4.27</div>
+        <div class="item">Branch Git: main</div>
+    </section>
+
+    <section class="panel">
+        <h2>2. Konfigurasi Route</h2>
+        <p>File: <code>routes/web.php</code></p>
+        <pre>Route::get('/', [HomeController::class, 'index'])
+    ->name('home');</pre>
+        <p>
+            Route utama menggunakan metode GET, menerima permintaan
+            ke halaman <code>/</code>, dan memanggil
+            <code>HomeController@index</code>.
+        </p>
+    </section>
+
+    <section class="panel">
+        <h2>3. Controller</h2>
+        <p>
+            File:
+            <code>app/Http/Controllers/HomeController.php</code>
+        </p>
+        <ul>
+            <li>Menyiapkan nama website KursusKu.</li>
+            <li>Menyiapkan daftar kursus dalam array.</li>
+            <li>Mengirim data ke view menggunakan <code>compact()</code>.</li>
+        </ul>
+    </section>
+
+    <section class="panel">
+        <h2>4. View dan Asset</h2>
+        <ul>
+            <li>Blade: <code>resources/views/home.blade.php</code></li>
+            <li>CSS: <code>public/css/style.css</code></li>
+            <li>Gambar: <code>public/images/hero-kursus.png</code></li>
+            <li>Daftar kursus ditampilkan menggunakan <code>@foreach</code>.</li>
+        </ul>
+    </section>
+
+    <section class="panel">
+        <h2>5. Perintah Verifikasi</h2>
+        <pre>php artisan route:list</pre>
+        <p>
+            Perintah ini digunakan untuk memeriksa daftar route yang
+            terdaftar di aplikasi Laravel.
+        </p>
+        <p class="note">
+            Catatan: halaman ini merupakan dokumentasi pemeriksaan.
+            Untuk bukti hasil eksekusi, gunakan screenshot terminal
+            yang menampilkan output perintah sebenarnya.
+        </p>
+    </section>
+
+    <section class="panel">
+        <h2>6. Ringkasan</h2>
+        <p>
+            Berdasarkan pemeriksaan kode project, route utama
+            terhubung ke controller dan controller mengirim data
+            ke view Blade. Keberhasilan runtime tetap dibuktikan
+            melalui pengujian aplikasi dan output terminal.
+        </p>
+    </section>
+</main>
+</body>
+</html>

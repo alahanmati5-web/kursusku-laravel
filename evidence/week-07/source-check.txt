@@ -1,0 +1,80 @@
+SOURCE CODE CHECK — KURSUSKU
+Praktikum Week 7
+
+Project: KursusKu
+Framework: Laravel 13.38.0
+PHP: 8.4.27
+Branch: main
+
+========================================
+1. ROUTE
+========================================
+File: routes/web.php
+
+Route utama:
+Route::get('/', [HomeController::class, 'index'])
+    ->name('home');
+
+Pemeriksaan:
+- URL utama: /
+- HTTP method: GET
+- Nama route: home
+- Controller: HomeController@index
+
+========================================
+2. CONTROLLER
+========================================
+File:
+app/Http/Controllers/HomeController.php
+
+Pemeriksaan:
+- Menyiapkan nama website KursusKu.
+- Menyiapkan daftar kursus dalam array.
+- Mengirim data ke view home menggunakan compact().
+
+========================================
+3. VIEW BLADE
+========================================
+File: resources/views/home.blade.php
+
+Pemeriksaan:
+- Menggunakan Blade untuk menampilkan halaman.
+- Menampilkan daftar kursus menggunakan @foreach.
+- Memanggil CSS dan gambar menggunakan helper asset().
+
+========================================
+4. PUBLIC ASSETS
+========================================
+CSS:
+public/css/style.css
+
+Gambar:
+public/images/hero-kursus.png
+
+Pemeriksaan:
+- File CSS dan gambar telah diperiksa keberadaannya.
+- Tampilan browser digunakan untuk memeriksa hasil halaman.
+
+========================================
+5. ROUTE VERIFICATION
+========================================
+Perintah:
+php artisan route:list
+
+Hasil yang pernah diperiksa:
+- Route / terdaftar.
+- Route bernama home mengarah ke HomeController@index.
+- Perintah route:list berhasil dijalankan.
+
+========================================
+CATATAN
+========================================
+Dokumen ini merangkum pemeriksaan source code berdasarkan
+struktur project KursusKu.
+
+Untuk bukti eksekusi, gunakan output terminal dan screenshot
+asli. Jangan menganggap catatan ini sebagai pengganti hasil
+pengujian runtime.
+
+Repository:
+https://github.com/alahanmati5-web/kursusku-laravel
