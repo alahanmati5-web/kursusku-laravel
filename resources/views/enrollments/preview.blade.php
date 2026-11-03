@@ -1,4 +1,4 @@
-```blade
+
 @extends('layouts.app')
 
 @section('title', 'Preview Pendaftaran | KursusKu')
@@ -82,6 +82,7 @@
         font-weight: 700;
         text-decoration: none;
         transition: 0.3s;
+        cursor: pointer;
     }
 
     .btn-neon:hover {
@@ -97,11 +98,20 @@
         padding: 11px 22px;
         text-decoration: none;
         transition: 0.3s;
+        display: inline-block;
     }
 
     .btn-outline-neon:hover {
         background: #39ff7b;
         color: #07110c;
+    }
+
+    .preview-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
     }
 
     @media (max-width: 576px) {
@@ -119,10 +129,10 @@
 
         .preview-actions {
             flex-direction: column;
-            gap: 12px;
         }
 
-        .preview-actions a {
+        .preview-actions a,
+        .preview-actions button {
             width: 100%;
             text-align: center;
         }
@@ -168,22 +178,41 @@
 
             <div class="preview-note">
                 <strong>Informasi:</strong><br>
-                Ini merupakan preview data pendaftaran.
-                Belum ada data yang disimpan ke database.
+                Pastikan seluruh data sudah benar.
+                Tekan tombol konfirmasi untuk menyimpan pendaftaran ke database.
             </div>
 
             <hr style="border-color: #28583a; margin: 28px 0;">
 
-            <div class="d-flex justify-content-between align-items-center preview-actions">
+            <div class="preview-actions">
 
                 <a href="{{ route('practicum.enrollments.create') }}"
                     class="btn-outline-neon">
                     ← Kembali ke Formulir
                 </a>
 
-                <a href="{{ route('home') }}" class="btn-neon">
-                    Kembali ke Beranda
-                </a>
+                <form action="{{ route('practicum.enrollments.store') }}"
+                    method="POST">
+
+                    @csrf
+
+                    <input type="hidden"
+                        name="name"
+                        value="{{ $data['name'] }}">
+
+                    <input type="hidden"
+                        name="email"
+                        value="{{ $data['email'] }}">
+
+                    <input type="hidden"
+                        name="course_id"
+                        value="{{ $data['course_id'] }}">
+
+                    <button type="submit" class="btn-neon">
+                        ✓ Konfirmasi dan Simpan
+                    </button>
+
+                </form>
 
             </div>
 
@@ -197,4 +226,3 @@
 </div>
 
 @endsection
-```

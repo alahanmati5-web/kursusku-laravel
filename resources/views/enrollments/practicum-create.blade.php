@@ -1,4 +1,4 @@
-```blade
+
 @extends('layouts.app')
 
 @section('title', 'Pendaftaran Praktikum | KursusKu')
@@ -171,7 +171,9 @@
                         required>
 
                     @error('name')
-                        <div class="invalid-feedback">{{ $message }}</div>
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
                     @enderror
                 </div>
 
@@ -186,12 +188,16 @@
                         required>
 
                     @error('email')
-                        <div class="invalid-feedback">{{ $message }}</div>
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
                     @enderror
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Pilih Kursus Praktikum</label>
+                    <label class="form-label">
+                        Pilih Kursus Praktikum
+                    </label>
 
                     <select name="course_id"
                         id="course_id"
@@ -200,17 +206,23 @@
 
                         <option value="">-- Pilih Kursus --</option>
 
-                        @foreach ($courses as $course)
-                            <option value="{{ $course['id'] }}"
-                                {{ old('course_id') == $course['id'] ? 'selected' : '' }}>
-                                {{ $course['name'] }}
+                        @forelse ($courses as $course)
+                            <option value="{{ $course->id }}"
+                                {{ old('course_id') == $course->id ? 'selected' : '' }}>
+                                {{ $course->name }}
                             </option>
-                        @endforeach
+                        @empty
+                            <option value="" disabled>
+                                Belum ada kursus yang tersedia
+                            </option>
+                        @endforelse
 
                     </select>
 
                     @error('course_id')
-                        <div class="invalid-feedback">{{ $message }}</div>
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
                     @enderror
                 </div>
 
@@ -284,6 +296,11 @@
                     '✓ Kursus: ' + result.course +
                     ' | Sisa kuota: ' + result.remaining;
 
+                if (result.remaining <= 0) {
+                    info.style.color = '#ff7777';
+                    info.textContent += ' (Kuota penuh)';
+                }
+
             } catch (error) {
 
                 info.style.color = '#ff7777';
@@ -294,7 +311,11 @@
 
         });
 
+        // Periksa kembali kursus jika halaman memuat pilihan lama
+        if (courseSelect.value) {
+            courseSelect.dispatchEvent(new Event('change'));
+        }
+
     });
 </script>
 @endpush
-```
