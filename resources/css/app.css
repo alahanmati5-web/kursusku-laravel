@@ -1,12 +1,188 @@
 
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+/* ==============================
+   KURSUSKU - DARK NEON GREEN
+============================== */
+
+:root {
+    --bg-dark: #080d0a;
+    --bg-card: #101a13;
+    --bg-input: #0b120d;
+    --neon: #39ff14;
+    --neon-soft: #a4ff8a;
+    --text-main: #f1f5f2;
+    --text-muted: #a0ada3;
+    --border: rgba(57, 255, 20, 0.22);
+}
+
 body {
-    background-color: #f8f9fa;
-    color: #212529;
+    background:
+        radial-gradient(circle at top right, rgba(57, 255, 20, 0.08), transparent 35%),
+        var(--bg-dark);
+    color: var(--text-main);
     font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: #090f0b !important;
+    border-bottom: 1px solid var(--border);
 }
 
 .navbar-brand {
+    color: var(--neon) !important;
     font-weight: bold;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+}
+
+.nav-link {
+    color: #e5eee7 !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--neon) !important;
+}
+
+/* Heading */
+
+h1, h2, h3, h4, h5 {
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Card */
+
+.card {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.05);
+}
+
+.card:hover {
+    border-color: rgba(57, 255, 20, 0.55);
+    box-shadow: 0 0 18px rgba(57, 255, 20, 0.12);
+}
+
+/* Button */
+
+.btn-success,
+.btn-primary {
+    background-color: var(--neon);
+    border-color: var(--neon);
+    color: #071007;
+    font-weight: bold;
+}
+
+.btn-success:hover,
+.btn-primary:hover {
+    background-color: #2bd400;
+    border-color: #2bd400;
+    color: #071007;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.45);
+}
+
+.btn-outline-success {
+    color: var(--neon);
+    border-color: var(--neon);
+}
+
+.btn-outline-success:hover {
+    background-color: var(--neon);
+    color: #071007;
+}
+
+/* Form */
+
+.form-control,
+.form-select {
+    background-color: var(--bg-input);
+    border: 1px solid #344638;
+    color: var(--text-main);
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--bg-input);
+    color: var(--text-main);
+    border-color: var(--neon);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+}
+
+.form-control::placeholder {
+    color: #829087;
+}
+
+.form-label {
+    color: var(--neon-soft);
+    font-weight: 600;
+}
+
+/* Table */
+
+.table {
+    color: var(--text-main);
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--text-main);
+    --bs-table-border-color: var(--border);
+    vertical-align: middle;
+}
+
+.table thead th {
+    background-color: #142019;
+    color: var(--neon);
+    border-bottom: 1px solid var(--neon);
+}
+
+.table tbody tr:hover {
+    background-color: rgba(57, 255, 20, 0.06);
+}
+
+/* Badge */
+
+.badge {
+    padding: 7px 10px;
+    border-radius: 20px;
+}
+
+/* Alert */
+
+.alert-success {
+    background-color: rgba(57, 255, 20, 0.1);
+    border: 1px solid var(--neon);
+    color: var(--neon-soft);
+}
+
+/* Pagination */
+
+.pagination .page-link {
+    background-color: var(--bg-card);
+    border-color: var(--border);
+    color: var(--neon);
+}
+
+.pagination .active .page-link {
+    background-color: var(--neon);
+    border-color: var(--neon);
+    color: #071007;
+}
+
+/* Link */
+
+a {
+    color: var(--neon);
+}
+
+a:hover {
+    color: var(--neon-soft);
 }
