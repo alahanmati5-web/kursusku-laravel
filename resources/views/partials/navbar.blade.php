@@ -14,7 +14,7 @@
 
         <div class="collapse navbar-collapse" id="navbarKursusKu">
 
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">
@@ -33,6 +33,14 @@
                     <a class="nav-link"
                        href="{{ route('enrollments.index') }}">
                         Daftar Pendaftaran
+                    </a>
+                </li>
+
+                {{-- Menu Daftar Kursus --}}
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{{ route('courses.index') }}">
+                        Daftar Kursus
                     </a>
                 </li>
 

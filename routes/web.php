@@ -1,5 +1,5 @@
-
 <?php
+
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -10,9 +10,8 @@ use App\Http\Controllers\CourseController;
 Route::get('/', [HomeController::class, 'index'])
     ->name('home');
 
-// Pengelolaan data kursus (Week 10)
-Route::resource('courses', CourseController::class)
-    ->only(['index', 'create', 'store']);
+// Pengelolaan data kursus (CRUD Pertemuan 11)
+Route::resource('courses', CourseController::class);
 
 // Daftar seluruh pendaftaran
 Route::get('/daftar-pendaftaran', [

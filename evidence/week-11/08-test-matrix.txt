@@ -1,0 +1,60 @@
+MATRIKS PENGUJIAN CRUD KURSUS
+PERTEMUAN 11 - KURSUSKU
+
+No | Skenario Pengujian | Hasil yang Diharapkan | Status
+
+1. Kode kursus duplikat
+   Hasil: Sistem menolak data.
+   Status: Berhasil
+
+2. Nama kursus kosong
+   Hasil: Sistem menolak data.
+   Status: Belum diuji
+
+3. Nama kursus kurang dari 3 karakter
+   Hasil: Sistem menolak data.
+   Status: Belum diuji
+
+4. Biaya bernilai negatif
+   Hasil: Sistem menolak data.
+   Status: Belum diuji
+
+5. Biaya bukan angka bulat
+   Hasil: Sistem menolak data.
+   Status: Belum diuji
+
+6. Kuota bernilai 0
+   Hasil: Sistem menolak data.
+   Status: Belum diuji
+
+7. Kuota bernilai 501
+   Hasil: Sistem menolak data.
+   Status: Berhasil
+
+8. Kuota minimum 1
+   Hasil: Sistem menerima data.
+   Status: Belum diuji
+
+9. Kuota maksimum 500
+   Hasil: Sistem menerima data.
+   Status: Belum diuji
+
+10. Tanggal tidak valid
+    Hasil: Sistem menolak data.
+    Status: Belum diuji
+
+11. Status tidak valid
+    Hasil: Sistem menolak data.
+    Status: Belum diuji
+
+12. Update dengan kode yang sama
+    Hasil: Data berhasil diperbarui.
+    Status: Berhasil
+
+13. Update data kursus
+    Hasil: Data berhasil diperbarui.
+    Status: Berhasil
+
+14. Delete kursus dummy DEL-001
+    Hasil: Data berhasil dihapus.
+    Status: Berhasil
